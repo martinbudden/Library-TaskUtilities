@@ -18,37 +18,37 @@ void test_task_base()
     enum { TASK_INTERVAL_MICROSECONDS = 5000 };
     const TaskBase task(TASK_INTERVAL_MICROSECONDS);
 
-    TEST_ASSERT_EQUAL(TASK_INTERVAL_MICROSECONDS, task.getTaskIntervalMicroseconds());
-    TEST_ASSERT_EQUAL(0, task.getTickCountDelta());
-    TEST_ASSERT_EQUAL(0, task.getTimeMicroSecondDelta());
+    TEST_ASSERT_EQUAL(TASK_INTERVAL_MICROSECONDS, task.get_task_interval_microseconds());
+    TEST_ASSERT_EQUAL(0, task.get_tick_count_delta());
+    TEST_ASSERT_EQUAL(0, task.get_time_microseconds_delta());
 
-    TEST_ASSERT_EQUAL(0, timeMs());
-    TEST_ASSERT_EQUAL(0, timeUs());
-    TEST_ASSERT_EQUAL(0, timeMs64());
-    TEST_ASSERT_EQUAL(0, timeUs64());
+    TEST_ASSERT_EQUAL(0, time_ms());
+    TEST_ASSERT_EQUAL(0, time_us());
+    TEST_ASSERT_EQUAL(0, time_ms64());
+    TEST_ASSERT_EQUAL(0, time_us64());
 }
 
 void test_time_microseconds()
 {
-    timeMs32_t tms32a = 2;
-    timeMs32_t tms32b = 5;
-    timeMsDelta_t tmsDelta32 = timeDifferenceMs(tms32a, tms32b);
-    TEST_ASSERT_EQUAL(-3, tmsDelta32);
+    const time_ms32_t t_ms32a = 2;
+    const time_ms32_t t_ms32b = 5;
+    const time_ms_delta_t t_ms_delta32 = time_difference_ms(t_ms32a, t_ms32b);
+    TEST_ASSERT_EQUAL(-3, t_ms_delta32);
 
-    timeMs64_t tms64a = 7;
-    timeMs64_t tms64b = 11;
-    timeMsDelta_t tmsDelta64 = timeDifferenceMs(tms64a, tms64b);
-    TEST_ASSERT_EQUAL(-4, tmsDelta64);
+    const time_ms64_t t_ms64a = 7;
+    const time_ms64_t t_ms64b = 11;
+    const time_ms_delta_t t_ms_delta64 = time_difference_ms(t_ms64a, t_ms64b);
+    TEST_ASSERT_EQUAL(-4, t_ms_delta64);
 
-    timeUs32_t tus32a = 13;
-    timeUs32_t tus32b = 23;
-    timeUsDelta_t tusDelta32 = timeDifferenceUs(tus32a, tus32b);
-    TEST_ASSERT_EQUAL(-10, tusDelta32);
+    const time_us32_t t_us32a = 13;
+    const time_us32_t t_us32b = 23;
+    const time_us_delta_t t_us_delta32 = time_difference_us(t_us32a, t_us32b);
+    TEST_ASSERT_EQUAL(-10, t_us_delta32);
 
-    timeUs64_t tus64a = 29;
-    timeUs64_t tus64b = 31;
-    timeUsDelta_t tusDelta64 = timeDifferenceUs(tus64a, tus64b);
-    TEST_ASSERT_EQUAL(-2, tusDelta64);
+    const time_us64_t t_us64a = 29;
+    const time_us64_t t_us64b = 31;
+    const time_us_delta_t t_us_delta64 = time_difference_us(t_us64a, t_us64b);
+    TEST_ASSERT_EQUAL(-2, t_us_delta64);
 }
 
 // NOLINTEND(cppcoreguidelines-avoid-magic-numbers,cppcoreguidelines-pro-bounds-pointer-arithmetic,misc-const-correctness,readability-magic-numbers)
