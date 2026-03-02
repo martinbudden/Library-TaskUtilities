@@ -14,5 +14,5 @@
     "version": "0.0.1",
     "frameworks": "*",
     "platforms": "*",
-    "headers": [ "TaskBase.h", "TimeMicroseconds.h", "MessageQueueBase.h" ]
+    "headers": [ "task_base.h", "time_microseconds.h", "message_queue_base.h, debug.h" ]
 }
