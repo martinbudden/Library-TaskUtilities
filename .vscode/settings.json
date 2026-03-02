@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "ACRO",
+        "adafruit",
         "afroflight",
         "altera",
         "Betaflight",
@@ -8,6 +9,7 @@
         "Budden",
         "bugprone",
         "clangtidy",
+        "cppcheck",
         "cppcoreguidelines",
         "CRSF",
         "DSHOT",
@@ -33,6 +35,7 @@
         "Waggressive",
         "Wattributes",
         "Wcast",
+        "Wconversion",
         "Wdeprecated",
         "Wdisabled",
         "Wdouble",
@@ -53,6 +56,7 @@
         "Wsign",
         "Wstrict",
         "Wtrampolines",
+        "Wunreachable",
         "Wunsafe",
         "Wunused"
     ]
